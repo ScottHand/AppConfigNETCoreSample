@@ -8,12 +8,12 @@
 - AWS AppConfig Application, Environment, and Hosted Configuration created in your AWS Account and deployed using instructions provided in [AppConfig Immersion Day Lab](https://workshop.aws-management.tools/appconfig/) (Follow instructions to [Create an Application](https://workshop.aws-management.tools/appconfig/create-application/), [Create an Environment](https://workshop.aws-management.tools/appconfig/create-environment/), [Create Configuration Profile](https://workshop.aws-management.tools/appconfig/create-configuration-profile/) and [Deployment](https://workshop.aws-management.tools/appconfig/deployment/) manually through the console).
 
 ## Overview
-This sample console application provides guidance on how to properly call the AWS AppConfig GetConfiguration API call to retrieve you configuration data.  Furthermore, it focuses on how often the GetConfiguration API should be called and the parameters that should be used.
+This sample .NET Core console application provides guidance on how to properly call the AWS AppConfig GetConfiguration API call to retrieve you configuration data.  Furthermore, it focuses on how often the GetConfiguration API should be called and the parameters that should be used.
 
 ## How to Properly Call and Handle the Response for AWS AppConfig GetConfiguration API
 To properly call the AWS AppConfig GetConfiguration API, the following should occur:
 
-1. Call GetConfiguration API with the following parameters:
+1. Call GetConfiguration API with the following parameterss:
     - Application
     - Environment
     - Configuration
@@ -43,7 +43,12 @@ It is recommended tuning the polling frequency of your GetConfiguration API call
 In this sample, the polling frequency has been tuned to every 15 seconds by setting a TTL exipration in order to help avoid excess charges.  If the TTL expiration has not expired, the configuration data stored in the local cache should be used and a call to GetConfiguration API avoided.
 
 ## To Execute the Sample Locally
-To run the sample locally, use these commands:
+To run the sample locally, you must first update the app.config file with your AWS profile name
+```
+    <add key="AWSProfileName" value="YOUR PROFILE NAME"></add>
+```
+
+Then, use these commands:
 ```bash
     $ cd AppConfigNETCoreSample
     $ dotnet run
