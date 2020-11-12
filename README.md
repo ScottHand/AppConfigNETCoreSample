@@ -5,7 +5,7 @@
 - AWSSDK.Core
 - AWSSDK.AppConfig
 - Newtonsoft.Json
-- AWS AppConfig Application, Environment, and Hosted Configuration created in your AWS Account and deployed using instructions provided in [AppConfig Immersion Day Lab](https://workshop.aws-management.tools/appconfig/) (Follow instructions to Create an Application, Create an Environment, Create Configuration Profile and Deployment manually through the console).
+- AWS AppConfig Application, Environment, and Hosted Configuration created in your AWS Account and deployed using instructions provided in [AppConfig Immersion Day Lab](https://workshop.aws-management.tools/appconfig/) (Follow instructions to [Create an Application](https://workshop.aws-management.tools/appconfig/create-application/), [Create an Environment](https://workshop.aws-management.tools/appconfig/create-environment/), [Create Configuration Profile](https://workshop.aws-management.tools/appconfig/create-configuration-profile/) and [Deployment](https://workshop.aws-management.tools/appconfig/deployment/) manually through the console).
 
 ## Overview
 This sample console application provides guidance on how to properly call the AWS AppConfig GetConfiguration API call to retrieve you configuration data.  Furthermore, it focuses on how often the GetConfiguration API should be called and the parameters that should be used.
