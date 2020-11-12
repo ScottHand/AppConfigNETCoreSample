@@ -48,7 +48,7 @@ namespace AppConfigNETCoreSample.Services {
 
         return AppConstants.AppConfigData;
       } else {
-        Console.WriteLine("DID NOT call GetConfigurationAPI to get data.  Return AppConfigData from cached value in AppConstants instead. \n");
+        Console.WriteLine("DID NOT call GetConfigurationAPI to get data.  Return AppConfigData from cached value in AppConstants.AppConfigData instead. \n");
         return AppConstants.AppConfigData;
       }
     }
