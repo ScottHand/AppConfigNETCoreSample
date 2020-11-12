@@ -35,7 +35,7 @@ namespace AppConfigNETCoreSample.Services {
         // The Content section only appears if the system finds new or updated configuration data.
         // If the system doesn't find new or updated configuration data, then the Content section is not returned (Null).
         // https://docs.aws.amazon.com/appconfig/latest/userguide/appconfig-retrieving-the-configuration.html
-        string decodedResponseData = getConfigurationResponse.Content.Length > 0 ? MemoryStreamHelper.DecodeMemoryStreamToBase64String(getConfigurationResponse.Content) : String.Empty;
+        string decodedResponseData = getConfigurationResponse.Content.Length > 0 ? MemoryStreamHelper.DecodeMemoryStreamToString(getConfigurationResponse.Content) : String.Empty;
 
 
         // convert DecodedResponseData to our AppConfigData model which consists of:

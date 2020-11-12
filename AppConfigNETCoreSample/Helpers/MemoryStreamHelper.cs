@@ -4,7 +4,7 @@ using System.Text;
 
 namespace AppConfigNETCoreSample.Helpers {
   public static class MemoryStreamHelper {
-    public static string DecodeMemoryStreamToBase64String(MemoryStream content) {
+    public static string DecodeMemoryStreamToString(MemoryStream content) {
       string result = string.Empty;
       int count;
       UnicodeEncoding uniEncoding = new UnicodeEncoding();

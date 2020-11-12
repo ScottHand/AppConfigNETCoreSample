@@ -27,7 +27,7 @@ namespace AppConfigNETCoreSample {
 
       System.Threading.Thread.Sleep(10000);
 
-      Console.WriteLine("--------- Results from second execution after waiting another 20 secs ------- \n");
+      Console.WriteLine("--------- Results from third execution after waiting another 20 secs ------- \n");
       result = await appConfigDataService.GetAppConfigData();
       Console.WriteLine("boolEnableLimitResults: {0} \n", result.boolEnableLimitResults);
       Console.WriteLine("intResultLimit: {0} \n", result.intResultLimit);
