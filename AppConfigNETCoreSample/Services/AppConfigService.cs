@@ -17,7 +17,7 @@ namespace AppConfigNETCoreSample.Services {
     // MemoryStream Content (Base64 encoded memory stream)
     public async Task<GetConfigurationResponse> GetConfigurationResponse() {
       // creates AmazonAppConfigClient using AWS profile stored in app.config
-      var amazonAppConfigClient = new AmazonAppConfigClient();
+      var amazonAppConfigClient = Program.AwsOptions.CreateServiceClient<IAmazonAppConfig>();
       // creates AmazonAppConfigClient using AWS programmatic access key and secret string
       //var amazonAppConfigClient = new AmazonAppConfigClient("YOUR ACCESS KEY", "YOUR SECRET STRING");
 

@@ -43,9 +43,14 @@ It is recommended tuning the polling frequency of your GetConfiguration API call
 In this sample, the polling frequency has been tuned to every 15 seconds by setting a TTL exipration in order to help avoid excess charges.  If the TTL expiration has not expired, the configuration data stored in the local cache should be used and a call to GetConfiguration API avoided.
 
 ## To Execute the Sample Locally
-To run the sample locally, you must first update the app.config file with your AWS profile name
-```
-    <add key="AWSProfileName" value="YOUR PROFILE NAME"></add>
+To run the sample locally, you must first update the appsettings.json file with your AWS profile name and region
+```json
+{
+  "AWS": {
+    "Profile": "default",
+    "Region": "us-east-1"
+  }
+}
 ```
 
 Then, use these commands:
