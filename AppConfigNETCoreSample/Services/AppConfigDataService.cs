@@ -16,8 +16,8 @@ namespace AppConfigNETCoreSample.Services {
     public async Task<AppConfigData> GetAppConfigData() {
       // In general, we should limit the calls to GetConfiguration API call to at least once every 15 seconds
       // In AppConstants the TimeToLiveExpiration is set to the initial DateTime of Program.cs execution plus AppConstants.TimeToLiveInSeconds (15 seconds)
-      // This if condition makes sure that we only call the GetConfiguration API call is we have not exceeded the TTL expiration, or
-      // if the ClientConfigurationVersion is set in our local cache in AppConstants - ClientConfigurationVersion is returned from the initial call to the GetConfiguation API (see below for more info)
+      // This if condition makes sure that we only call the GetConfiguration API call if we have not exceeded the TTL expiration, or
+      // if the ClientConfigurationVersion is set in our local cache in AppConstants - ClientConfigurationVersion is returned from the initial call to the GetConfiguration API (see below for more info)
       if (DateTime.UtcNow > AppConstants.TimeToLiveExpiration || String.IsNullOrEmpty(AppConstants.ClientConfigurationVersion)) {
         Console.WriteLine("CALLED GetConfigurationAPI to get AppConfigData  \n");
         IAppConfigService appConfigService = new AppConfigService(_clientId);
