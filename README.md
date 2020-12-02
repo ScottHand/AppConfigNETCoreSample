@@ -70,7 +70,7 @@ Then, use these commands:
 | /Services/IAppConfigService.cs                      | Interface for AppConfigService |  
 | /Services/AppConfigDataService.cs    | Service class that calls AppConfigService to get the configuration data and serializde the JSON configuration data from the hosted configuration into our AppConfigData model |  
 | /Services/IAppConfigDataService.cs                      | Interface for AppConfigDataService |  
-| /app.config                      | Config file with AWS profile name used to run the application and must match a profile linked to the AWS Account used to create the AppConfig Application, Environment and Configuration in the AWS Console |  
+| /appsettings.json                      | Config file with AWS profile name used to run the application and must match a profile linked to the AWS Account used to create the AppConfig Application, Environment and Configuration in the AWS Console |  
 | /AppConstants.cs                          | Static class containing values for the AppConfig Application, Environment and Configuration as well as values used to serve as the local cache for ClientConfigurationVersion and AppConfigData  |  
 | /Program.cs                          | Initial entry point of the appliation |
 ----  
