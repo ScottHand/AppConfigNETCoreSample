@@ -12,5 +12,6 @@ namespace AppConfigNETCoreSample {
     public static double TimeToLiveInSeconds = 15;
     public static AppConfigData AppConfigData;
     public static GetConfigurationResponse GetConfigurationResponse;
+    public static string AppConfilgApiGatewayEnpointUrl = "https://<your-api-gateway-id>.execute-api.us-east-1.amazonaws.com/prod";
   }
 }

@@ -16,9 +16,7 @@ namespace AppConfigNETCoreSample {
       var builder = new ConfigurationBuilder().AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
       AwsOptions = builder.Build().GetAWSOptions();
 
-      Guid g = new Guid();
-
-      IAppConfigDataService appConfigDataService = new AppConfigDataService(g);
+      IAppConfigDataService appConfigDataService = new AppConfigDataService();
 
       AppConstants.TimeToLiveExpiration = DateTime.UtcNow.AddSeconds(AppConstants.TimeToLiveInSeconds);
 
@@ -28,22 +26,7 @@ namespace AppConfigNETCoreSample {
       Console.WriteLine("intResultLimit: {0} \n", result.intResultLimit);
       Console.WriteLine("\n");
 
-      System.Threading.Thread.Sleep(10000);
-
-      Console.WriteLine("--------- Results from second execution after waiting 10 secs ------- \n");
-      result = await appConfigDataService.GetAppConfigData();
-      Console.WriteLine("boolEnableLimitResults: {0} \n", result.boolEnableLimitResults);
-      Console.WriteLine("intResultLimit: {0} \n", result.intResultLimit);
-      Console.WriteLine("\n");
-
-      System.Threading.Thread.Sleep(10000);
-
-      Console.WriteLine("--------- Results from third execution after waiting another 10 secs ------- \n");
-      result = await appConfigDataService.GetAppConfigData();
-      Console.WriteLine("boolEnableLimitResults: {0} \n", result.boolEnableLimitResults);
-      Console.WriteLine("intResultLimit: {0} \n", result.intResultLimit);
-      Console.WriteLine("\n");
-
+      
       Console.WriteLine("--------- Program completed... Press any key to exit. ------- \n");
       Console.ReadKey(true);
 
